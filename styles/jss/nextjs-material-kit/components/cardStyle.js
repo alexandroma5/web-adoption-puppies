@@ -1,3 +1,7 @@
+import {
+  infoColor
+} from "/styles/jss/nextjs-material-kit.js";
+
 const cardStyle = {
   card: {
     border: "0",

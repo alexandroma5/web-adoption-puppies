@@ -4,7 +4,7 @@ import {
   infoColor,
   successColor,
   warningColor,
-  dangerColor
+  dangerColor 
 } from "/styles/jss/nextjs-material-kit.js";
 
 const typographyStyle = {
@@ -50,11 +50,20 @@ const typographyStyle = {
   dangerText: {
     color: dangerColor
   },
+  whiteText: {
+    color: "#fff"
+  },
   smallText: {
     fontSize: "65%",
     fontWeight: "400",
     lineHeight: "1",
     color: "#777"
+  },
+  boldText: {
+    fontWeight: "700"
+  },
+  regularText: {
+    fontWeight: "300"
   }
 };
 
