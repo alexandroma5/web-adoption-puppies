@@ -86,6 +86,16 @@ export default function HeaderLinks(props) {
           Blog
         </Button>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/login"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          Iniciar sesión
+        </Button>
+      </ListItem>
     </List>
   );
 }
