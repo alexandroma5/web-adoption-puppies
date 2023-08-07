@@ -94,7 +94,7 @@ const primaryColor = "#1381be"; // cambiar el tema pr defecto (9c27b0)
 const warningColor = "#ff9800";
 const dangerColor = "#f44336";
 const successColor = "#4caf50";
-const infoColor = "#1381be";
+const infoColor = "#bedff1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
 

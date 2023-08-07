@@ -1,4 +1,6 @@
 import React from "react";
+// react components for routing our app without refresh
+import Link from "next/link";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -35,77 +37,73 @@ export default function LoginPage(props) {
     <div>
       <Header
         absolute
-        color="info"
-        brand="ADÓPTAME"
+        color="primary"
         rightLinks={<HeaderLinks />}
         {...rest}
       />
       <div
         className={classes.pageHeader}
         style={{
-          backgroundImage: "url('/img/bg1.png')"
+          backgroundImage: "url('/img/perritos/unsplash-dog5.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "top center"
         }}
       >
-        <div className={classes.container}>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={6} md={4}>
-              <Card className={classes[cardAnimaton]}>
-                <form className={classes.form}>
-                  <div className={classes.divider}></div>
-                  <Typography 
-                    variant="h4" 
-                    color="info" 
-                    fontWeight="bold" 
-                    textAlign="center"
-                  >
-                    INICIO DE SESIÓN
-                  </Typography>
-                  <CardBody>
-                    <CustomInput
-                      labelText="Email..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Password"
-                      id="pass"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
-                          </InputAdornment>
-                        ),
-                        autoComplete: "off"
-                      }}
-                    />
-                  </CardBody>
-                  <CardFooter className={classes.cardFooter}>
-                    <Button round color="info">
-                      INICIAR SESIÓN
-                    </Button>
-                  </CardFooter>
-                </form>
-              </Card>
-            </GridItem>
-          </GridContainer>
-        </div>
-        <Footer background="#1381be" whiteFont />
+      <div className={classes.container}>
+        <GridContainer justify="center">
+          <GridItem xs={12} sm={6} md={6}>
+            <Card className={classes[cardAnimaton]}>
+              <form className={classes.form}>
+                <div className={classes.divider}></div>
+                <Typography variant="h4" color="primary" fontWeight="bold" textAlign="center">
+                  INICIO DE SESIÓN
+                </Typography>
+                <CardBody>
+                  <CustomInput
+                    labelText="Email..."
+                    id="email"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                    inputProps={{
+                      type: "email",
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <Email className={classes.inputIconsColor} />
+                        </InputAdornment>
+                      )
+                    }}
+                  />
+                  <CustomInput
+                    labelText="Password"
+                    id="pass"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                    inputProps={{
+                      type: "password",
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <Icon className={classes.inputIconsColor}>
+                            lock_outline
+                          </Icon>
+                        </InputAdornment>
+                      ),
+                      autoComplete: "off"
+                    }}
+                  />
+                </CardBody>
+                <CardFooter className={classes.cardFooter}>
+                  <Button round color="primary">
+                    INICIAR SESIÓN
+                  </Button>
+                </CardFooter>
+              </form>
+            </Card>
+          </GridItem>
+        </GridContainer>
+      </div>
+      <Footer whiteFont />
       </div>
     </div>
   );

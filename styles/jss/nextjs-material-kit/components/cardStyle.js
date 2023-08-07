@@ -1,5 +1,9 @@
 import {
-  infoColor
+  primaryColor,
+  infoColor,
+  successColor,
+  warningColor,
+  dangerColor
 } from "/styles/jss/nextjs-material-kit.js";
 
 const cardStyle = {
@@ -27,6 +31,26 @@ const cardStyle = {
   },
   cardCarousel: {
     overflow: "hidden",
+  },
+  cardPrimary: {
+    // color: "#fff",
+    background: primaryColor,
+  },
+  cardInfo: {
+    // color: "#fff",
+    background: infoColor,
+  },
+  cardSuccess: {
+    // color: "#fff",
+    background: successColor,
+  },
+  cardWarning: {
+    // color: "#fff",
+    background: warningColor,
+  },
+  cardDanger: {
+    // color: "#fff",
+    background: dangerColor,
   },
 };
 

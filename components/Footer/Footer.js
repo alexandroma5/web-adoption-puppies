@@ -5,21 +5,18 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 // material-ui core components
 import { List, ListItem } from "@material-ui/core";
-import Tooltip from "@material-ui/core/Tooltip";
-import Icon from "@material-ui/core/Icon";
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Button from "/components/CustomButtons/Button.js";
 import Favorite from "@material-ui/icons/Favorite";
-
+// page styles
 import styles from "/styles/jss/nextjs-material-kit/components/footerStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Footer(props) {
   const classes = useStyles();
-  const { whiteFont, background } = props;
+  const { whiteFont } = props;
   
   const footerClasses = classNames({
     [classes.footer]: true,
@@ -30,11 +27,8 @@ export default function Footer(props) {
     [classes.footerWhiteFont]: whiteFont
   });
 
-  // Agregar estilos para el color de fondo
-  const backgroundStyle = { background };
-
   return (
-    <footer className={footerClasses} style={backgroundStyle}> {/* Aplicar el estilo de color de fondo */}
+    <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.left}>
           <List className={classes.list}>
@@ -44,7 +38,7 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                ADÓPTAME
+                - TKM -
               </div>
             </ListItem>
           </List>
@@ -53,7 +47,7 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               &copy; {1900 + new Date().getYear()}, hecho con {" "}
-              <Favorite className={classes.icon} /> por{" "} by Creative Tim.
+              <Favorite className={classes.icon} /> {" "} por Two.
             </ListItem>
           </List>
         </div>
@@ -64,5 +58,4 @@ export default function Footer(props) {
 
 Footer.propTypes = {
   whiteFont: PropTypes.bool,
-  background: PropTypes.string // Nueva propiedad para el color de fondo.
 };

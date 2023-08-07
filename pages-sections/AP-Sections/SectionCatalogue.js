@@ -1,9 +1,10 @@
 import React from "react";
-// @material-ui/core components
+// react components for routing our app without refresh
+import Link from "next/link";
 // nodejs library that concatenates classes
+import classNames from "classnames";
+// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -13,208 +14,256 @@ import Card from "/components/Card/Card.js";
 import CardHeader from "/components/Card/CardHeader.js";
 import CardBody from "/components/Card/CardBody.js";
 import Typography from "/components/Typography/Typography.js";
-
-
-import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/completedStyle.js";
+// section styles
+import styles from "/styles/jss/nextjs-material-kit/sectionStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function SectionCatalogue() {
   const classes = useStyles();
-
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRounded,
+    classes.imgFluid
+  );
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={12}>
+        <GridContainer>
+          <GridItem xs={12}>
             <img
               style={{height: "40px", width: "40px"}}
-              src="/img/perritos/icons8-huella-de-perro-64 (1).png"
+              src="/img/perritos/icon-footprintblue.png"
               alt="..."
             />
           </GridItem>
-          <GridItem xs={12} sm={12} md={12}>
-            <Typography variant="h2" color="info" fontWeight="bold" textAlign="center">Todos nuestros peluditos</Typography>
+          <GridItem xs={12}>
+            <Typography variant="h2" color="primary" fontWeight="bold" textAlign="center">- Explora -</Typography>
+            <Typography variant="h3" color="primary" textAlign="center">Todos nuestros cachorros</Typography>
           </GridItem>
-          <GridItem xs={12} sm={12} md={12}>
+          <GridItem xs={12}>
             <NavPills
-                color="warning"
-                alignCenter="true"
-                tabs={[
-                    {
+              color="warning"
+              tabs={[
+                  {
                     tabButton: "Todos",
                     tabContent: (
-                        <GridContainer>
+                      <GridContainer>
                         <GridItem xs={6} sm={6} md={3}>
-                          <Card>
+                          <Card color="primary">
                             <CardHeader>
                             <img
-                              style={{height: "auto", width: "100%"}}
-                              src="/img/perritos/puppies-0001.jpg"
+                              src="/img/perritos/web-puppies1.jpg"
                               alt="..."
-                              className={classes.imgCardTop}
+                              className={imageClasses}
                             />
                             </CardHeader>
                             <CardBody>
-                                <Typography variant="h4" color="info" fontWeight="bold" textAlign="center">LUCA</Typography>
-                                <Button round color="warning">Adoptar</Button>
-                                <Button round color="danger">Apadrinar</Button>
+                              <Typography variant="h4" fontWeight="bold" textAlign="center">LUCA</Typography>
+                              <Link href="/profile-puppy">
+                                <a className={classes.link}>
+                                  <Button round color="warning">Adoptar</Button>
+                                </a>
+                              </Link>
+                              <Link href="/register-sponsor">
+                                <a className={classes.link}>
+                                  <Button round color="danger">Apadrinar</Button>
+                                </a>
+                              </Link>
                             </CardBody>
                           </Card>
                         </GridItem>
                         <GridItem xs={6} sm={6} md={3}>
-                          <Card>
+                          <Card color="info">
                             <CardHeader>
                             <img
-                              style={{height: "auto", width: "100%"}}
-                              src="/img/perritos/puppies-0001.jpg"
+                              src="/img/perritos/web-puppies1.jpg"
                               alt="..."
-                              className={classes.imgCardTop}
+                              className={imageClasses}
                             />
                             </CardHeader>
                             <CardBody>
-                                <Typography variant="h4" color="info" fontWeight="bold" textAlign="center">LUCA</Typography>
-                                <Button round color="warning">Adoptar</Button>
-                                <Button round color="danger">Apadrinar</Button>
+                                <Typography variant="h4" fontWeight="bold" textAlign="center">SHIWA</Typography>
+                                <Link href="/profile-puppy">
+                                  <a className={classes.link}>
+                                    <Button round color="warning">Adoptar</Button>
+                                  </a>
+                                </Link>
+                                <Link href="/register-sponsor">
+                                  <a className={classes.link}>
+                                    <Button round color="danger">Apadrinar</Button>
+                                  </a>
+                                </Link>
                             </CardBody>
                           </Card>
                         </GridItem>
                         <GridItem xs={6} sm={6} md={3}>
-                          <Card>
+                          <Card color="primary">
                             <CardHeader>
                             <img
-                              style={{height: "auto", width: "100%"}}
-                              src="/img/perritos/puppies-0001.jpg"
+                              src="/img/perritos/web-puppies1.jpg"
                               alt="..."
-                              className={classes.imgCardTop}
+                              className={imageClasses}
                             />
                             </CardHeader>
                             <CardBody>
-                                <Typography variant="h4" color="info" fontWeight="bold" textAlign="center">LUCA</Typography>
-                                <Button round color="warning">Adoptar</Button>
-                                <Button round color="danger">Apadrinar</Button>
+                                <Typography variant="h4" fontWeight="bold" textAlign="center">TOMY</Typography>
+                                <Link href="/profile-puppy">
+                                  <a className={classes.link}>
+                                    <Button round color="warning">Adoptar</Button>
+                                  </a>
+                                </Link>
+                                <Link href="/register-sponsor">
+                                  <a className={classes.link}>
+                                    <Button round color="danger">Apadrinar</Button>
+                                  </a>
+                                </Link>
                             </CardBody>
                           </Card>
                         </GridItem>
                         <GridItem xs={6} sm={6} md={3}>
-                          <Card>
+                          <Card color="info">
                             <CardHeader>
                             <img
-                              style={{height: "auto", width: "100%"}}
-                              src="/img/perritos/puppies-0001.jpg"
+                              src="/img/perritos/web-puppies1.jpg"
                               alt="..."
-                              className={classes.imgCardTop}
+                              className={imageClasses}
                             />
                             </CardHeader>
                             <CardBody>
-                                <Typography variant="h4" color="info" fontWeight="bold" textAlign="center">LUCA</Typography>
-                                <Button round color="warning">Adoptar</Button>
-                                <Button round color="danger">Apadrinar</Button>
+                                <Typography variant="h4" fontWeight="bold" textAlign="center">LIN</Typography>
+                                <Link href="/profile-puppy">
+                                  <a className={classes.link}>
+                                    <Button round color="warning">Adoptar</Button>
+                                  </a>
+                                </Link>
+                                <Link href="/register-sponsor">
+                                  <a className={classes.link}>
+                                    <Button round color="danger">Apadrinar</Button>
+                                  </a>
+                                </Link>
                             </CardBody>
                           </Card>
                         </GridItem>
                         <GridItem xs={6} sm={6} md={3}>
-                          <Card>
+                          <Card color="primary">
                             <CardHeader>
                             <img
-                              style={{height: "auto", width: "100%"}}
-                              src="/img/perritos/puppies-0001.jpg"
+                              src="/img/perritos/web-puppies1.jpg"
                               alt="..."
-                              className={classes.imgCardTop}
+                              className={imageClasses}
                             />
                             </CardHeader>
                             <CardBody>
-                                <Typography variant="h4" color="info" fontWeight="bold" textAlign="center">LUCA</Typography>
-                                <Button round color="warning">Adoptar</Button>
-                                <Button round color="danger">Apadrinar</Button>
+                                <Typography variant="h4" fontWeight="bold" textAlign="center">DANY</Typography>
+                                <Link href="/profile-puppy">
+                                  <a className={classes.link}>
+                                    <Button round color="warning">Adoptar</Button>
+                                  </a>
+                                </Link>
+                                <Link href="/register-sponsor">
+                                  <a className={classes.link}>
+                                    <Button round color="danger">Apadrinar</Button>
+                                  </a>
+                                </Link>
                             </CardBody>
                           </Card>
                         </GridItem>
                         <GridItem xs={6} sm={6} md={3}>
-                          <Card>
+                          <Card color="info">
                             <CardHeader>
                             <img
-                              style={{height: "auto", width: "100%"}}
-                              src="/img/perritos/puppies-0001.jpg"
+                              src="/img/perritos/web-puppies1.jpg"
                               alt="..."
-                              className={classes.imgCardTop}
+                              className={imageClasses}
                             />
                             </CardHeader>
                             <CardBody>
-                                <Typography variant="h4" color="info" fontWeight="bold" textAlign="center">LUCA</Typography>
-                                <Button round color="warning">Adoptar</Button>
-                                <Button round color="danger">Apadrinar</Button>
+                              <Typography variant="h4" fontWeight="bold" textAlign="center">DEUS</Typography>
+                              <Link href="/profile-puppy">
+                                <a className={classes.link}>
+                                  <Button round color="warning">Adoptar</Button>
+                                </a>
+                              </Link>
+                              <Link href="/register-sponsor">
+                                <a className={classes.link}>
+                                  <Button round color="danger">Apadrinar</Button>
+                                </a>
+                              </Link>
                             </CardBody>
                           </Card>
+                        </GridItem>
+                        <GridItem xs={12}>
+                          <Button color="warning">
+                            VER MÁS
+                          </Button>
                         </GridItem>
                       </GridContainer>
                     )
-                    },
-                    {
+                  },
+                  {
                     tabButton: "Machos",
                     tabContent: (
-                        <span>
+                      <span>
                         <p>
-                            Contenido de machos
+                          Contenido.
                         </p>
-                        </span>
+                      </span>
                     )
-                    },
-                    {
+                  },
+                  {
                     tabButton: "Hembras",
                     tabContent: (
-                        <span>
+                      <span>
                         <p>
-                            Contenido de hembras
+                          Contenido.
                         </p>
-                        </span>
+                      </span>
                     )
-                    },
-                    {
-                        tabButton: "Pequeños",
-                        tabContent: (
-                            <span>
-                            <p>
-                                Contenido de pequeños
-                            </p>
-                            </span>
-                        )
-                    },
-                    {
-                        tabButton: "Grandes",
-                        tabContent: (
-                            <span>
-                            <p>
-                                Contenido de grandes
-                            </p>
-                            </span>
-                        )
-                    },
-                    {
-                        tabButton: "Traviesos",
-                        tabContent: (
-                            <span>
-                            <p>
-                                Contenido de traviesos
-                            </p>
-                            </span>
-                        )
-                    },
-                    {
-                        tabButton: "Tranquilos",
-                        tabContent: (
-                            <span>
-                            <p>
-                                Contenido de tranquilos
-                            </p>
-                            </span>
-                        )
-                    }
-                ]}
+                  },
+                  {
+                    tabButton: "Pequeños",
+                    tabContent: (
+                      <span>
+                        <p>
+                          Contenido.
+                        </p>
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Grandes",
+                    tabContent: (
+                      <span>
+                        <p>
+                          Contenido.
+                        </p>
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Traviesos",
+                    tabContent: (
+                      <span>
+                        <p>
+                          Contenido.
+                        </p>
+                      </span>
+                    )
+                  },
+                  {
+                    tabButton: "Tranquilos",
+                    tabContent: (
+                      <span>
+                        <p>
+                          Contenido.
+                        </p>
+                      </span>
+                    )
+                  }
+              ]}
+              alignCenter={true}
             />
-            <Button color="warning">
-              VER MÁS
-            </Button>
           </GridItem>
         </GridContainer>
       </div>
